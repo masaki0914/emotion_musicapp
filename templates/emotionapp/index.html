@@ -1,0 +1,16 @@
+{% extends 'emotionapp/base.html' %} {% block content %}
+
+<div class="container" style="margin-top: 20px">
+  <div>
+    <h3 class="mt-4 mb-5 border-bottom" style="color: green;">感情判定アプリ</h3>
+    <p>画像ファイルを選択して推定ボタンをクリックしてください。</p>
+    <form method="POST" id="image-input" class="form" enctype="multipart/form-data">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit" id="inference" class="btn btn-success" style="margin-top: 20px">
+        推論する
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

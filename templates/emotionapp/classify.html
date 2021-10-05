@@ -1,0 +1,9 @@
+{% extends 'emotionapp/base.html' %} 
+
+{% block content %}
+    <img src="{{ img_url}}" width='300' height='300' id="prob_img" alt="画像が見つかりませんでした。" />
+    <h4>{{t}}</h4>
+    <h4>{{y}}%</h4>
+    <h4>{{music | safe }}</h4>
+    <a href="" class="btn btn-success" style="margin-top: 30px;">画像選択メニューに戻る</a>
+{% endblock %}
